@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Contacto — Uncles&Co"
+  description="Contacta a Uncles&Co. Solicita una demo, cotizacion o resuelve tus dudas sobre nuestros productos de software."
+>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="fade-in">
+        <span class="gradient-text">Contactanos</span>
+      </h1>
+      <p class="hero__subtitle fade-in fade-in-delay-1">
+        Cuentanos sobre tu empresa y te ayudamos a encontrar la solucion ideal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact content -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="contact-layout fade-in">
+
+        <!-- Form -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@empresa.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" name="company" placeholder="Nombre de tu empresa" />
+          </div>
+
+          <div class="form-group">
+            <label for="product">Producto de interes</label>
+            <select id="product" name="product">
+              <option value="">Selecciona un producto</option>
+              <option value="core">Core — HR y Nomina</option>
+              <option value="vault">Vault — ERP Contable</option>
+              <option value="arch">Arch — Manufactura</option>
+              <option value="multiple">Multiples productos</option>
+              <option value="other">Otro / No estoy seguro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuentanos sobre tu empresa y que necesitas..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+        </form>
+
+        <!-- Contact info -->
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="contact-info__label">Email</p>
+              <p class="contact-info__value">info@unclescompany.com</p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="contact-info__label">Ubicacion</p>
+              <p class="contact-info__value">Ecuador</p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <p class="contact-info__label">Horario</p>
+              <p class="contact-info__value">Lunes a Viernes, 9:00 - 18:00 (ECT)</p>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-xl); padding: var(--space-xl); background: var(--color-dark-card); border: 1px solid var(--color-dark-border); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: var(--space-sm);">Acceso directo a productos</h4>
+            <p class="contact-info__value" style="margin-bottom: var(--space-lg);">Si ya eres cliente, accede directamente:</p>
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <a href="https://core.unclescompany.com" target="_blank" rel="noopener" class="btn btn-core btn-sm">Ingresar a Core</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form as HTMLFormElement);
+      const name = data.get('name');
+      // For now, show a simple confirmation. Replace with actual form handling.
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.textContent = 'Mensaje enviado';
+        btn.setAttribute('disabled', 'true');
+        (btn as HTMLElement).style.opacity = '0.7';
+      }
+    });
+  }
+</script>

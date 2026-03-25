@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+
+const features = [
+  {
+    icon: '$',
+    title: 'Facturacion electronica SRI',
+    description: 'Emision y recepcion de comprobantes electronicos autorizados. Facturas, notas de credito, retenciones, guias.'
+  },
+  {
+    icon: '#',
+    title: 'Contabilidad NIIF',
+    description: 'Plan de cuentas flexible, asientos automaticos, estados financieros bajo normas internacionales.'
+  },
+  {
+    icon: '*',
+    title: 'Inventarios multi-bodega',
+    description: 'Control de stock en tiempo real, transferencias entre bodegas, kardex valorado y alertas de minimos.'
+  },
+  {
+    icon: '>',
+    title: 'Cuentas por cobrar y pagar',
+    description: 'Cartera de clientes y proveedores, vencimientos, cobros parciales y conciliacion automatica.'
+  },
+  {
+    icon: '+',
+    title: 'Tributario (ATS/103/104)',
+    description: 'Generacion automatica de ATS, formularios 103 y 104. Listos para subir al portal SRI.'
+  },
+  {
+    icon: '~',
+    title: 'Bancos y conciliacion',
+    description: 'Registro de movimientos bancarios, conciliacion con contabilidad y flujo de caja en tiempo real.'
+  },
+  {
+    icon: '%',
+    title: 'Activos fijos',
+    description: 'Control del ciclo de vida de activos, depreciacion automatica, bajas y revalorizaciones segun NIIF.'
+  },
+  {
+    icon: '=',
+    title: 'Punto de venta (POS)',
+    description: 'Terminal de venta rapida con soporte para multiples cajas, turnos y cierre diario.'
+  }
+];
+
+const detailFeatures = [
+  'Facturacion electronica autorizada por SRI',
+  'Notas de credito y debito electronicas',
+  'Retenciones electronicas automaticas',
+  'Guias de remision electronicas',
+  'Liquidaciones de compra',
+  'Plan de cuentas configurable (NIIF)',
+  'Asientos contables automaticos y manuales',
+  'Balance general y estado de resultados',
+  'Libro mayor y libro diario',
+  'Anexo Transaccional Simplificado (ATS)',
+  'Formularios 103 y 104',
+  'Kardex valorado (promedio ponderado)',
+  'Gestion de bodegas multiples',
+  'Ordenes de compra y cotizaciones',
+  'Reporte de flujo de caja',
+  'AI assistant para consultas contables'
+];
+---
+
+<Base
+  title="Vault — ERP Contable y Facturacion | Uncles&Co"
+  description="ERP completo para Ecuador. Facturacion electronica SRI, contabilidad NIIF, inventarios, tributario, bancos, activos fijos y POS."
+>
+
+  <!-- Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <span class="product-hero__badge fade-in" style="background: var(--color-vault);">Vault</span>
+      <h1 class="product-hero__title fade-in fade-in-delay-1">
+        ERP completo<br /><span class="gradient-text">para tu empresa</span>
+      </h1>
+      <p class="product-hero__subtitle fade-in fade-in-delay-2">
+        Facturacion electronica, contabilidad NIIF, inventarios, tributario y mas. Todo lo que necesitas para la gestion financiera de tu empresa ecuatoriana.
+      </p>
+      <div class="hero__actions fade-in fade-in-delay-3">
+        <a href="/contacto" class="btn btn-vault btn-lg">Solicitar acceso</a>
+        <a href="/contacto" class="btn btn-secondary btn-lg">Solicitar demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Funcionalidades principales</h2>
+        <p>Un ERP disenado desde cero para la realidad tributaria y contable de Ecuador.</p>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <FeatureGrid features={features} accentColor="#2563EB" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail list -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Que incluye</h2>
+      </div>
+      <div class="feature-list fade-in fade-in-delay-1">
+        {detailFeatures.map((feat) => (
+          <div class="feature-list__item">
+            <div class="feature-list__check" style="background: var(--color-vault);">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </div>
+            <span class="feature-list__text">{feat}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container">
+      <div class="pricing-card fade-in">
+        <h3 class="pricing-card__title">Precios personalizados</h3>
+        <p class="pricing-card__desc">Planes flexibles segun el volumen de facturacion y modulos requeridos. Contactanos para una cotizacion.</p>
+        <a href="/contacto" class="btn btn-vault btn-lg">Contactanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__box fade-in">
+        <h2 class="cta-section__title">Tu contabilidad, bajo control</h2>
+        <p class="cta-section__desc">Descubre como Vault puede reemplazar tu sistema actual con una solucion moderna y 100% ecuatoriana.</p>
+        <a href="/contacto" class="btn btn-primary btn-lg">Agendar demo</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

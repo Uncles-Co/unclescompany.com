@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+
+const features = [
+  {
+    icon: '$',
+    title: 'Nomina ecuatoriana',
+    description: 'Calculo automatico de roles, decimos, fondos de reserva, utilidades. 100% compatible con IESS y SRI.'
+  },
+  {
+    icon: '#',
+    title: 'Portal empleados',
+    description: 'Autoservicio para solicitudes de vacaciones, permisos, consulta de roles y documentos.'
+  },
+  {
+    icon: '*',
+    title: 'Evaluaciones 360',
+    description: 'Evaluaciones de desempeno configurables con retroalimentacion multi-direccional y seguimiento de objetivos.'
+  },
+  {
+    icon: '>',
+    title: 'Reclutamiento ATS',
+    description: 'Publicacion de vacantes, tracking de candidatos, flujos de seleccion y onboarding digital.'
+  },
+  {
+    icon: '+',
+    title: 'Capacitacion LMS',
+    description: 'Plataforma de aprendizaje con cursos, certificaciones, seguimiento de progreso y reportes.'
+  },
+  {
+    icon: '~',
+    title: 'Engagement y eNPS',
+    description: 'Encuestas de clima laboral, medicion de engagement y Net Promoter Score de empleados.'
+  },
+  {
+    icon: '%',
+    title: 'AI prediccion de rotacion',
+    description: 'Modelos predictivos para identificar riesgo de salida y tomar accion preventiva con tu equipo.'
+  },
+  {
+    icon: '=',
+    title: 'Reportes IESS, SRI, MRL',
+    description: 'Generacion automatica de archivos para organismos de control. Sin errores, sin reprocesos.'
+  }
+];
+
+const detailFeatures = [
+  'Roles de pago mensuales y quincenales',
+  'Decimo tercero y decimo cuarto automaticos',
+  'Fondos de reserva y jubilacion patronal',
+  'Generacion de archivos IESS (planillas)',
+  'Formulario 107 y anexo RDEP para SRI',
+  'Actas de finiquito MRL',
+  'Contratos laborales digitales',
+  'Control de asistencia y marcaciones',
+  'Vacaciones, permisos y licencias',
+  'Organigrama dinamico',
+  'Evaluaciones por competencias',
+  'Encuestas de pulso semanal',
+  'Dashboard de metricas de RRHH',
+  'Multi-empresa desde una sola cuenta',
+  'Reportes personalizados y exportables',
+  'API para integraciones'
+];
+---
+
+<Base
+  title="Core — HR y Nomina Ecuatoriana | Uncles&Co"
+  description="Sistema de recursos humanos y nomina ecuatoriana. IESS, SRI, MRL integrados. Portal empleados, evaluaciones, reclutamiento y mas."
+>
+
+  <!-- Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <span class="product-hero__badge fade-in" style="background: var(--color-core);">Core</span>
+      <h1 class="product-hero__title fade-in fade-in-delay-1">
+        HR y Nomina<br /><span class="gradient-text">para Ecuador</span>
+      </h1>
+      <p class="product-hero__subtitle fade-in fade-in-delay-2">
+        Gestiona todo el ciclo de vida de tus colaboradores. Nomina ecuatoriana con compliance IESS, SRI y MRL integrado desde el dia uno.
+      </p>
+      <div class="hero__actions fade-in fade-in-delay-3">
+        <a href="https://core.unclescompany.com" target="_blank" rel="noopener" class="btn btn-core btn-lg">Ingresar a Core</a>
+        <a href="/contacto" class="btn btn-secondary btn-lg">Solicitar demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Funcionalidades principales</h2>
+        <p>Todo lo que necesitas para gestionar tu talento humano en un solo lugar.</p>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <FeatureGrid features={features} accentColor="#534AB7" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail list -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Que incluye</h2>
+      </div>
+      <div class="feature-list fade-in fade-in-delay-1">
+        {detailFeatures.map((feat) => (
+          <div class="feature-list__item">
+            <div class="feature-list__check" style="background: var(--color-core);">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </div>
+            <span class="feature-list__text">{feat}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container">
+      <div class="pricing-card fade-in">
+        <h3 class="pricing-card__title">Precios personalizados</h3>
+        <p class="pricing-card__desc">Cada empresa es diferente. Contactanos para recibir una propuesta adaptada a tu tamano y necesidades.</p>
+        <a href="/contacto" class="btn btn-core btn-lg">Contactanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__box fade-in">
+        <h2 class="cta-section__title">Simplifica tu gestion de RRHH</h2>
+        <p class="cta-section__desc">Agenda una demo y conoce como Core puede ahorrarte horas de trabajo administrativo cada mes.</p>
+        <a href="/contacto" class="btn btn-primary btn-lg">Agendar demo</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

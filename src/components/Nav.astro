@@ -1,0 +1,47 @@
+---
+
+---
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">
+      <span>Uncles&Co</span>
+    </a>
+
+    <div class="nav__links">
+      <a href="/#productos" class="nav__link">Productos</a>
+      <a href="/nosotros" class="nav__link">Nosotros</a>
+      <a href="/contacto" class="nav__link">Contacto</a>
+      <a href="/contacto" class="btn btn-primary btn-sm nav__cta">Comenzar</a>
+    </div>
+
+    <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile-menu" id="mobile-menu">
+    <a href="/#productos">Productos</a>
+    <a href="/nosotros">Nosotros</a>
+    <a href="/contacto">Contacto</a>
+    <a href="/contacto" class="btn btn-primary btn-sm">Comenzar</a>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('is-open');
+    });
+    // Close on link click
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+      });
+    });
+  }
+</script>

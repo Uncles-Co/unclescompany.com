@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+
+const features = [
+  {
+    icon: '>',
+    title: 'Recepcion de madera',
+    description: 'Registro de ingreso de materia prima con mediciones, proveedores, especies y calidad del material.'
+  },
+  {
+    icon: '~',
+    title: 'Secado en horno',
+    description: 'Control de camaras de secado, temperaturas, tiempos y humedad. Historico completo por lote.'
+  },
+  {
+    icon: '#',
+    title: 'Produccion y bloques',
+    description: 'Gestion de ordenes de produccion, cortes, dimensiones y rendimiento por proceso.'
+  },
+  {
+    icon: '*',
+    title: 'Tracking QR',
+    description: 'Trazabilidad completa de cada pieza con codigos QR. Desde la recepcion hasta el despacho final.'
+  },
+  {
+    icon: '+',
+    title: 'Contenedores y exportacion',
+    description: 'Armado de contenedores, packing lists, cubicacion y documentacion para exportacion.'
+  },
+  {
+    icon: '$',
+    title: 'Stock management',
+    description: 'Inventario en tiempo real por bodega, especie, dimension y estado de secado.'
+  },
+  {
+    icon: '%',
+    title: 'Mantenimiento',
+    description: 'Programacion de mantenimiento preventivo de maquinaria, hornos y equipos de planta.'
+  },
+  {
+    icon: '=',
+    title: 'Dashboard analitico',
+    description: 'Metricas de produccion, rendimiento, tiempos de secado y eficiencia operativa en tiempo real.'
+  }
+];
+
+const detailFeatures = [
+  'Registro de ingreso de madera por proveedor',
+  'Clasificacion por especie y calidad',
+  'Control de humedad por lote',
+  'Programacion de camaras de secado',
+  'Monitoreo de temperatura en tiempo real',
+  'Ordenes de produccion configurables',
+  'Optimizacion de cortes y rendimiento',
+  'Etiquetado QR por pieza y lote',
+  'Escaneo movil para tracking en planta',
+  'Armado de contenedores con cubicacion',
+  'Packing lists para exportacion',
+  'Alertas de stock minimo',
+  'Reportes de produccion diaria',
+  'Mantenimiento preventivo programado',
+  'Historial completo de trazabilidad',
+  'Multi-planta desde una sola cuenta'
+];
+---
+
+<Base
+  title="Arch — Gestion de Manufactura y Madera | Uncles&Co"
+  description="Sistema de gestion de manufactura y procesamiento de madera. Trazabilidad QR, control de secado, produccion y exportacion."
+>
+
+  <!-- Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <span class="product-hero__badge fade-in" style="background: var(--color-arch);">Arch</span>
+      <h1 class="product-hero__title fade-in fade-in-delay-1">
+        Manufactura<br /><span class="gradient-text">inteligente</span>
+      </h1>
+      <p class="product-hero__subtitle fade-in fade-in-delay-2">
+        Gestiona el procesamiento de madera de principio a fin. Desde la recepcion de materia prima hasta el contenedor listo para exportar.
+      </p>
+      <div class="hero__actions fade-in fade-in-delay-3">
+        <a href="/contacto" class="btn btn-arch btn-lg">Solicitar acceso</a>
+        <a href="/contacto" class="btn btn-secondary btn-lg">Solicitar demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Funcionalidades principales</h2>
+        <p>Control total de tu operacion maderera, desde el bosque hasta el puerto.</p>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <FeatureGrid features={features} accentColor="#059669" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail list -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Que incluye</h2>
+      </div>
+      <div class="feature-list fade-in fade-in-delay-1">
+        {detailFeatures.map((feat) => (
+          <div class="feature-list__item">
+            <div class="feature-list__check" style="background: var(--color-arch);">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </div>
+            <span class="feature-list__text">{feat}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container">
+      <div class="pricing-card fade-in">
+        <h3 class="pricing-card__title">Precios personalizados</h3>
+        <p class="pricing-card__desc">Arch se adapta a tu operacion. Contactanos para una propuesta basada en tu volumen y procesos.</p>
+        <a href="/contacto" class="btn btn-arch btn-lg">Contactanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__box fade-in">
+        <h2 class="cta-section__title">Moderniza tu planta</h2>
+        <p class="cta-section__desc">Conoce como Arch ya ayuda a 4 empresas a optimizar su produccion y exportacion de madera.</p>
+        <a href="/contacto" class="btn btn-primary btn-lg">Agendar demo</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

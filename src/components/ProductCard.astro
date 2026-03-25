@@ -1,0 +1,28 @@
+---
+interface Props {
+  name: string;
+  tagline: string;
+  href: string;
+  accentColor: string;
+  initial: string;
+}
+
+const { name, tagline, href, accentColor, initial } = Astro.props;
+---
+
+<a href={href} class="product-card" style={`--accent: ${accentColor};`}>
+  <div class="product-card__icon" style={`background: ${accentColor};`}>
+    {initial}
+  </div>
+  <h3 class="product-card__name">{name}</h3>
+  <p class="product-card__tagline">{tagline}</p>
+  <span class="product-card__link" style={`color: ${accentColor};`}>
+    Conocer mas &rarr;
+  </span>
+</a>
+
+<style>
+  .product-card:hover {
+    border-color: var(--accent);
+  }
+</style>
