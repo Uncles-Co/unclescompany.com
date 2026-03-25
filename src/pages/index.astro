@@ -29,29 +29,174 @@ import ProductCard from '../components/ProductCard.astro';
         <p>Tres soluciones especializadas que trabajan juntas para cubrir todas las necesidades de tu empresa.</p>
       </div>
 
-      <div class="grid grid-3 fade-in fade-in-delay-1">
-        <ProductCard
-          name="Core"
-          tagline="Sistema de recursos humanos y nomina ecuatoriana. Gestiona tu talento humano de principio a fin."
-          href="/core"
-          accentColor="#534AB7"
-          initial="C"
-        />
-        <ProductCard
-          name="Vault"
-          tagline="ERP completo con facturacion electronica SRI, contabilidad NIIF, inventarios y mas."
-          href="/vault"
-          accentColor="#2563EB"
-          initial="V"
-        />
-        <ProductCard
-          name="Arch"
-          tagline="Gestion de manufactura y procesamiento de madera. Trazabilidad completa desde recepcion hasta exportacion."
-          href="/arch"
-          accentColor="#059669"
-          initial="A"
-        />
+      <!-- Core -->
+      <div class="product-showcase fade-in" style="--accent: #534AB7; --accent-glow: rgba(83,74,183,0.15);">
+        <div class="product-showcase__info">
+          <div class="product-showcase__badge">Core</div>
+          <h3 class="product-showcase__title">Recursos Humanos y Nomina</h3>
+          <p class="product-showcase__desc">Gestiona el ciclo completo del talento humano: desde la contratacion hasta la liquidacion, con nomina 100% ecuatoriana.</p>
+          <ul class="product-showcase__features">
+            <li>Nomina con IESS, SRI, fondos de reserva</li>
+            <li>Portal de empleados self-service</li>
+            <li>Evaluaciones 360 y OKRs</li>
+            <li>AI: prediccion de rotacion</li>
+          </ul>
+          <a href="/core" class="btn btn-primary">Conocer Core</a>
+        </div>
+        <div class="product-showcase__preview">
+          <div class="app-mockup" style="--accent: #534AB7;">
+            <div class="app-mockup__topbar">
+              <div class="app-mockup__dots"><span></span><span></span><span></span></div>
+              <div class="app-mockup__url">core.unclescompany.com</div>
+            </div>
+            <div class="app-mockup__body">
+              <div class="app-mockup__sidebar">
+                <div class="app-mockup__logo">C<span>.</span></div>
+                <div class="mock-nav-item active"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+              </div>
+              <div class="app-mockup__content">
+                <div class="mock-header"></div>
+                <div class="mock-kpi-row">
+                  <div class="mock-kpi" style="--kpi-color: #534AB7;"><div class="mock-kpi__value">48</div><div class="mock-kpi__label"></div></div>
+                  <div class="mock-kpi" style="--kpi-color: #7C6FD4;"><div class="mock-kpi__value">$12.4k</div><div class="mock-kpi__label"></div></div>
+                  <div class="mock-kpi" style="--kpi-color: #9B8FE8;"><div class="mock-kpi__value">2.1%</div><div class="mock-kpi__label"></div></div>
+                </div>
+                <div class="mock-chart">
+                  <svg viewBox="0 0 200 60" class="mock-chart__svg">
+                    <polyline points="0,45 30,38 60,42 90,30 120,25 150,28 180,15 200,18" fill="none" stroke="#534AB7" stroke-width="2"/>
+                    <polyline points="0,45 30,38 60,42 90,30 120,25 150,28 180,15 200,18" fill="url(#coreFill)" stroke="none"/>
+                    <defs><linearGradient id="coreFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#534AB7" stop-opacity="0.3"/><stop offset="100%" stop-color="#534AB7" stop-opacity="0"/></linearGradient></defs>
+                  </svg>
+                </div>
+                <div class="mock-table">
+                  <div class="mock-table__row header"></div>
+                  <div class="mock-table__row"></div>
+                  <div class="mock-table__row"></div>
+                  <div class="mock-table__row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Vault -->
+      <div class="product-showcase product-showcase--reverse fade-in" style="--accent: #2563EB; --accent-glow: rgba(37,99,235,0.15);">
+        <div class="product-showcase__info">
+          <div class="product-showcase__badge">Vault</div>
+          <h3 class="product-showcase__title">ERP y Facturacion Electronica</h3>
+          <p class="product-showcase__desc">Contabilidad NIIF, facturacion SRI, inventarios, bancos, activos fijos y punto de venta. Todo en un solo lugar.</p>
+          <ul class="product-showcase__features">
+            <li>Facturacion electronica SRI con firma digital</li>
+            <li>Contabilidad NIIF doble partida</li>
+            <li>Inventarios multi-bodega con kardex</li>
+            <li>AI: asistente contable VaultBot</li>
+          </ul>
+          <a href="/vault" class="btn btn-primary">Conocer Vault</a>
+        </div>
+        <div class="product-showcase__preview">
+          <div class="app-mockup" style="--accent: #2563EB;">
+            <div class="app-mockup__topbar">
+              <div class="app-mockup__dots"><span></span><span></span><span></span></div>
+              <div class="app-mockup__url">vault.unclescompany.com</div>
+            </div>
+            <div class="app-mockup__body">
+              <div class="app-mockup__sidebar">
+                <div class="app-mockup__logo">V<span>.</span></div>
+                <div class="mock-nav-item active"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+              </div>
+              <div class="app-mockup__content">
+                <div class="mock-header"></div>
+                <div class="mock-kpi-row">
+                  <div class="mock-kpi" style="--kpi-color: #2563EB;"><div class="mock-kpi__value">$84k</div><div class="mock-kpi__label"></div></div>
+                  <div class="mock-kpi" style="--kpi-color: #3B82F6;"><div class="mock-kpi__value">127</div><div class="mock-kpi__label"></div></div>
+                  <div class="mock-kpi" style="--kpi-color: #60A5FA;"><div class="mock-kpi__value">98%</div><div class="mock-kpi__label"></div></div>
+                </div>
+                <div class="mock-chart">
+                  <svg viewBox="0 0 200 60" class="mock-chart__svg">
+                    <rect x="10" y="30" width="20" height="30" rx="2" fill="#2563EB" opacity="0.4"/>
+                    <rect x="40" y="20" width="20" height="40" rx="2" fill="#2563EB" opacity="0.5"/>
+                    <rect x="70" y="25" width="20" height="35" rx="2" fill="#2563EB" opacity="0.6"/>
+                    <rect x="100" y="10" width="20" height="50" rx="2" fill="#2563EB" opacity="0.7"/>
+                    <rect x="130" y="15" width="20" height="45" rx="2" fill="#2563EB" opacity="0.8"/>
+                    <rect x="160" y="5" width="20" height="55" rx="2" fill="#2563EB" opacity="0.9"/>
+                  </svg>
+                </div>
+                <div class="mock-table">
+                  <div class="mock-table__row header"></div>
+                  <div class="mock-table__row"></div>
+                  <div class="mock-table__row"></div>
+                  <div class="mock-table__row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arch -->
+      <div class="product-showcase fade-in" style="--accent: #059669; --accent-glow: rgba(5,150,105,0.15);">
+        <div class="product-showcase__info">
+          <div class="product-showcase__badge">Arch</div>
+          <h3 class="product-showcase__title">Manufactura y Trazabilidad</h3>
+          <p class="product-showcase__desc">Control total del proceso productivo: recepcion de materia prima, secado, produccion, empaque y exportacion con trazabilidad QR.</p>
+          <ul class="product-showcase__features">
+            <li>Trazabilidad QR en cada etapa</li>
+            <li>Control de secado en horno</li>
+            <li>Contenedores y logistica export</li>
+            <li>AI: asistente de planta</li>
+          </ul>
+          <a href="/arch" class="btn btn-primary">Conocer Arch</a>
+        </div>
+        <div class="product-showcase__preview">
+          <div class="app-mockup" style="--accent: #059669;">
+            <div class="app-mockup__topbar">
+              <div class="app-mockup__dots"><span></span><span></span><span></span></div>
+              <div class="app-mockup__url">arch.unclescompany.com</div>
+            </div>
+            <div class="app-mockup__body">
+              <div class="app-mockup__sidebar">
+                <div class="app-mockup__logo">A<span>.</span></div>
+                <div class="mock-nav-item active"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+                <div class="mock-nav-item"></div>
+              </div>
+              <div class="app-mockup__content">
+                <div class="mock-header"></div>
+                <div class="mock-kpi-row">
+                  <div class="mock-kpi" style="--kpi-color: #059669;"><div class="mock-kpi__value">342</div><div class="mock-kpi__label"></div></div>
+                  <div class="mock-kpi" style="--kpi-color: #10B981;"><div class="mock-kpi__value">12</div><div class="mock-kpi__label"></div></div>
+                  <div class="mock-kpi" style="--kpi-color: #34D399;"><div class="mock-kpi__value">4</div><div class="mock-kpi__label"></div></div>
+                </div>
+                <div class="mock-chart">
+                  <svg viewBox="0 0 200 60" class="mock-chart__svg">
+                    <polyline points="0,50 25,42 50,45 75,35 100,20 125,30 150,22 175,10 200,15" fill="none" stroke="#059669" stroke-width="2"/>
+                    <polyline points="0,50 25,42 50,45 75,35 100,20 125,30 150,22 175,10 200,15" fill="url(#archFill)" stroke="none"/>
+                    <defs><linearGradient id="archFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#059669" stop-opacity="0.3"/><stop offset="100%" stop-color="#059669" stop-opacity="0"/></linearGradient></defs>
+                  </svg>
+                </div>
+                <div class="mock-table">
+                  <div class="mock-table__row header"></div>
+                  <div class="mock-table__row"></div>
+                  <div class="mock-table__row"></div>
+                  <div class="mock-table__row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
